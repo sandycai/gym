@@ -17,22 +17,33 @@ if (loggedIn())
 <div class = "container">
 <div class="row">
 <header class="col-md-12">
-<h1>Online Bookshop Database Access</h1>
+<h1 >Online Gym Database Access</h1>
 </header>
 </div>
 <div class="row">
+
+<div class="col-md-3 startup">
+<img src="images/book3.jpg" alt ="">
+</div>
+<div class="col-md-4 col-md-offset-1 startup" style="margin-top: 8%;">
+<?php $action=false;?>
+<a class="start"   data-toggle="modal" href="#login" style="border:2px solid; text-decoration: none;border-radius:10px;color: black;">Enter the Gymstore</a>
+</div>
+<div class="col-md-3 startup">
+<img src="images/images.jpg" alt ="">
+</div>
+
+
 <div class="col-md-4 startup">
 <img src="images/book4.jpg" alt ="">
 </div>
-<div class="col-md-4 startup">
-<?php $action=false;?>
-<a class="start"   data-toggle="modal" href="#login">Enter the BookStore</a>
-</div>
-
 
 <div class="col-md-4 startup">
-<img src="images/book3.jpg" alt ="">
-</div>
+<img src="images/images1.jpg" alt ="">
+</div> 
+<div class="col-md-4 startup">
+<img src="images/images2.jpg" alt ="">
+</div> 
 </div>
 
 
@@ -41,7 +52,7 @@ if (loggedIn())
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4>Online Bookshop Database Access</h4>
+        <h4>Online Gym Database Access</h4>
       </div>
       <form action="<?php echo  $_SERVER['PHP_SELF']; ?>" method="post" class = "form-horizontal">
       <div class="modal-body">

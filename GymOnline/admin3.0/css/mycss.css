@@ -1,17 +1,17 @@
 body{
-  background-color: #64DD17;
-  color: red;
+  background-color: #69F0AE;
+  color: black;
 }
 
 .container {
   background-color: #fdf8f2;
-  margin-top:3%;
+  margin-top:1%;
   padding:3%;
 }
 
 header {
-  padding:2em;
-  background-color:#64DD17;
+  padding:1em;
+  background-color:#B9F6CA;
 }
 
 h1, h2{
@@ -21,7 +21,7 @@ h1, h2{
 
 h1{
   font-size: 2em;
-  color:white;
+  color:#263238;
 }
 
 p{
@@ -33,11 +33,11 @@ a {
 }
 
 form,table {
-  margin-top:3%;
+  margin-top:1%;
 }
 
 .table th{
-    background-color:navy;
+    background-color:#66BB6A;
     color:white;
 }
 
@@ -49,7 +49,7 @@ form,table {
 .table.table-striped tbody tr:nth-child(odd) td,
 .table.table-striped tbody tr:nth-child(odd) th
  {
-  background-color: #E6E6FA;
+  background-color: #EEEEEE;
 }
 
 .table.table-striped tbody tr:nth-child(even):hover td,
@@ -58,7 +58,7 @@ form,table {
 .table.table-striped tbody tr:nth-child(odd):hover th 
 
 {
-background-color:#dcdcdc;
+background-color:#E0F7FA;
 cursor:pointer;
 
 }
@@ -85,10 +85,89 @@ input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:
     border-color:red;
 }
 
+.navbar {
+  margin-top:2em;
+  background-color: #BDBDBD;
+  background-image: none;
+  border:solid #BDBDBD; 1px;
+}
 
+.navbar ul.nav li {
+  font-family : Arial, Helvetica, sans-serif;
+  font-size : 1.2em;
+  padding:0;
+}
 
+.navbar ul.nav li a:link, .navbar ul.nav li a:visited{
+  color : #263238;
+}
 
+.navbar ul.nav li a:hover{
+  text-shadow:none;
+  color:antiquewhite;  
+}
+
+.startup {
+   margin-top:2em;
+}
+
+a.start {
+   font-size:200%;
+   text-decoration:underline;
+}
+
+ .navbar ul.nav li.dropdown ul{
+   margin-top:.2em;
+ }
  
+ 
+ .navbar ul.nav li.dropdown ul.dropdown-menu li{
+   margin-top:.5em;  
+ }
+ 
+ .navbar ul.nav li.dropdown ul.dropdown-menu a:link, .navbar ul.nav li.dropdown ul.dropdown-menu a:visited{
+   background-color: #BDBDBD;
+   background-image: none;
+   color:white;
+ }
+ .navbar ul.nav li.dropdown ul.dropdown-menu a:hover{
+   background-color: #BDBDBD;
+   background-image: none;
+   color:antiquewhite;
+ }
+ 
+ /* The background colour is set to #256290 and the font colour set to white when the drop down
+    menu is open */
+  .navbar .nav li.dropdown.open .dropdown-toggle {
+   color:white;
+   background-image:none;
+   background-color:#BDBDBD;
+ }
+ 
+ /* The font colour of the list items within the nested list are changed to white when they are hovered over */
+ ul.nav li.dropdown ul.dropdown-menu a:hover{
+   color:white;
+ }
+ 
+ /* The caret is set to white */
+ .navbar .nav li.dropdown .dropdown-toggle .caret{
+   border-top-color:white;
+   border-bottom-color:white;
+ }
+  
+ /* The colour of the caret is changed to black when it is hovered over or the current focus */
+ .navbar .nav li.dropdown  a:hover .caret,.navbar .nav li.dropdown a:focus .caret{
+   border-top-color:white;
+   border-bottom-color:white;
+ }
+  
+ /* The colour of the caret is changed to white when the nested list is open */ 
+ .navbar .nav li.dropdown.open .dropdown-toggle .caret{
+   border-top-color:white;
+   border-bottom-color:white;
+ }
+ 
+
 
 
 

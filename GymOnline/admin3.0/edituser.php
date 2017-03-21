@@ -56,7 +56,7 @@ $uname = $row['username'];
      <div class ="form-group">
       <label for="pass" class="col-sm-2 control-label">Password</label>
        <div class="col-sm-10">
-       <input type="password" name="pass" id = "pass" required autofocus pattern ="\S{6,}">
+       <input type="password" name="pass" id = "pass" required autofocus >
       </div></div>
      <div class ="form-group">
 		   <label for="newpass" class="col-sm-2 control-label">New Password</label>
