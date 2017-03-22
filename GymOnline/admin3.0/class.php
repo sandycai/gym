@@ -1,9 +1,3 @@
-sjdfkljslks;fjks;lf
-<!-- jfkdsjfklsdjl -->
-
-
-
-
 <?php require 'inc/secure.inc.php';
 require 'inc/init.inc.php';
 if (isset($_GET['stat'])) {
