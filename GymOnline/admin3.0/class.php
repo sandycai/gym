@@ -1,4 +1,4 @@
-<?php require 'inc/secure.inc.php';
+<?php dsfsfsdfsdfsdfsd 'inc/secure.inc.php';
 require 'inc/init.inc.php';
 if (isset($_GET['stat'])) {
     if ($_GET['stat'] == 'add') {
