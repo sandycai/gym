@@ -1,0 +1,123 @@
+<!-- Form used to add new entries of employee in database -->
+
+<div id="ModalLoginForm" class="modal fade">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title">Add Customer</h1>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal alert alert-warning" name="form.empList" id="empList" ng-submit="insertInfo(empInfo);" >
+
+					<h3 class="text-center">Insert Customer Details Into Database</h3>
+
+					<div class="form-group">
+						<label for="customer_id">Customer ID:</label>
+						<input type="text" name="customer_id" class="form-control" placeholder="Enter customer ID" ng-model="empInfo.customer_id" autofocus required></div>
+
+					<div class="form-group">
+						<p class="text-danger" ng-show="">Customer ID field is Empty!</p>
+					</div>
+					<div class="form-group">
+						<label for="Name">Customer Name:</label>
+						<input type="text" name="name" class="form-control" placeholder="Enter customer Name" ng-model="empInfo.name" autofocus required></div>
+
+					<div class="form-group">
+						<p class="text-danger" ng-show="">Name field is Empty!</p>
+					</div>
+
+					<div class="form-group">
+						<label for="type">Type:</label>
+						<input type="text" name="type" class="form-control" placeholder="Enter customer Type Address" ng-model="empInfo.type"  autofocus required></div>
+
+					<div class="form-group">
+						<p class="text-danger" ng-show="">Invalid type!</p>
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email Address:</label>
+						<input type="email" name="email" class="form-control" placeholder="Enter Employee Email Address" ng-model="empInfo.email"  autofocus required></div>
+					<div class="form-group">
+						<p class="text-danger" ng-show="form.empList.email.$invalid && form.empList.email.$dirty">Invalid Email!</p>
+					</div>
+
+					<div class="form-group">
+						<label for="phone">phone:</label>
+						<input type="text" name="phone" class="form-control" placeholder="Enter Customer phone" ng-model="empInfo.phone"  autofocus required></div>
+					<div class="form-group">
+						<p class="text-danger" ng-show="">phone field is Empty!</p>
+					</div>
+
+<!-- 					<div class="form-group">
+	<label for="Address">date_entered:</label>
+	<input type="text" name="date_entered" class="form-control" placeholder="Enter Customer phone" ng-model="empInfo.date_entered"  autofocus required>
+</div>
+<div class="form-group">
+	<p class="text-danger" ng-show="">phone date_entered is Empty!</p>
+</div> -->
+					<div class="form-group">
+						<label for="dob">date_entered:</label>
+                       
+                        <div class="input-group date">
+						<input id="mydate" type="text" name="dob" class="form-control" placeholder="Enter Customer dateofbirth" ng-model="empInfo.date_entered"  autofocus required>
+                        <label for="dob" class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+
+                        </label>						
+
+                        </div>
+					</div>
+
+<!-- <div class="input-group date">
+  <input id="dob" type="text" name='dob' class="form-control">
+  <label for="dob" class="input-group-addon">
+    <span class="glyphicon glyphicon-calendar"></span>
+
+  </label>
+</div>  -->
+
+
+
+
+					<div class="form-group">
+						<p class="text-danger" ng-show="">dateofbirth date_entered is Empty!</p>
+					</div>
+
+<!--             <div class="form-group">
+  <label for="dob" class="col-sm-3 control-label">Date of Birth</label>
+  <div class="col-sm-4">
+
+    <div class="input-group date">
+      <input id="dob" type="text" name='dob' class="form-control">
+      <label for="dob" class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+
+      </label>
+    </div>
+    
+  </div>
+</div> -->
+
+
+					<div class="form-group">
+						<button class="btn btn-warning" ng-disabled="form.empList.$invalid">Add Into Database</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+  <script>
+$(document).ready(function () {
+
+$("#mydate").datepicker(
+{format:'yyyy-mm-dd'}
+	);
+
+
+});
+   </script>
+<!-- /.modal -->
