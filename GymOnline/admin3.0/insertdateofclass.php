@@ -61,6 +61,18 @@ else{
        </div>
      </div>
 
+<div class="form-group">
+            <label for="dob">date_entered:</label>
+                       
+                        <div class="input-group date">
+            <input id="dob" type="text" name="dob" class="form-control" placeholder="Enter Customer dateofbirth" ng-model="empInfo.dob"  autofocus required>
+                        <label for="dob" class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+
+                        </label>            
+
+                        </div>
+          </div>
 
 
      <div class ="form-group">
@@ -110,6 +122,15 @@ else{
 }
 require 'inc/footer.inc.php';
 ?>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+
+  <script>
+$(document).ready(function () {
+
+$("#dob").datepicker();
+
+});
+   </script>
 </section>
 </div>
 </div>

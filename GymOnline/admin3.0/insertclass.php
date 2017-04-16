@@ -34,16 +34,6 @@ else{
         <input type="text" name="class_id" id="class_id"   class="form-control" required autofocus   title="Please enter a valid classid">
        </div>
      </div>
-
-     <div class ="form-group">
-       <label for="classname" class="col-sm-2 control-label">Classname</label>
-       <div class="col-sm-10">
-        <input type="text" name="classname" id="classname"   class="form-control" required autofocus   title="Please enter a valid classname">
-       </div>
-     </div>
-
-
-
      <div class ="form-group">
        <label for="classname" class="col-sm-2 control-label">Classname</label>
        <div class="col-sm-10">

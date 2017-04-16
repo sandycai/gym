@@ -11,6 +11,9 @@ $scope.getAll = function(){
       });
 }
 
+
+
+
 $scope.insertInfo = function (info) {
              // use $.param jQuery func9tion to serialize data from JSON
               var data = $.param({
@@ -80,5 +83,7 @@ $scope.config = {
 			 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
 		 }
 }
+
+
 
 }]);

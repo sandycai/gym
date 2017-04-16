@@ -1,5 +1,5 @@
 <!-- Form used to add new entries of employee in database -->
-
+<!-- <input type="text" ng-model="user.name" ng-pattern="/a-zA-Z/" /> -->
 <div id="ModalLoginForm" class="modal fade">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -13,7 +13,9 @@
 
 					<div class="form-group">
 						<label for="customer_id">Customer ID:</label>
-						<input type="text" name="customer_id" class="form-control" placeholder="Enter customer ID" ng-model="empInfo.customer_id" autofocus required></div>
+						<input type="text" name="customer_id" class="form-control" placeholder="Enter customer ID" ng-pattern="" ng-model="empInfo.customer_id" autofocus required></div>
+						
+						
 
 					<div class="form-group">
 						<p class="text-danger" ng-show="">Customer ID field is Empty!</p>
@@ -28,10 +30,11 @@
 
 					<div class="form-group">
 						<label for="type">Type:</label>
-						<input type="text" name="type" class="form-control" placeholder="Enter customer Type Address" ng-model="empInfo.type"  autofocus required></div>
+						
+						<input type="text" name="type" class="form-control" placeholder="Enter customer Type Address" ng-model="empInfo.type" autofocus required></div>
 
 					<div class="form-group">
-						<p class="text-danger" ng-show="">Invalid type!</p>
+						<p class="text-danger" ng-show="form.empList.type.$error.pattern">Invalid type!</p>
 					</div>
 
 					<div class="form-group">
@@ -42,11 +45,13 @@
 					</div>
 
 					<div class="form-group">
-						<label for="phone">phone:</label>
-						<input type="text" name="phone" class="form-control" placeholder="Enter Customer phone" ng-model="empInfo.phone"  autofocus required></div>
+						<label for="phone" >phone:</label>
+						<span  ng-show="form.empList.phone.$error.required">**</span>
+						<input type="text" name="phone" class="form-control" placeholder="Enter Customer phone" ng-model="empInfo.phone" ng-pattern="/^(\(\d{3}\)|\d{3})-?\d{6,}$/"  autofocus required></div>
 					<div class="form-group">
-						<p class="text-danger" ng-show="">phone field is Empty!</p>
+						<p class="text-danger" ng-show="form.empList.phone.$error.pattern">Phone doesn't respect the pattern.</p>
 					</div>
+					
 
 <!-- 					<div class="form-group">
 	<label for="Address">date_entered:</label>
@@ -120,4 +125,11 @@ $("#mydate").datepicker(
 
 });
    </script>
+
+   <script>
+  angular.module('ngPatternExample', [])
+    .controller('ExampleController', ['$scope', function($scope) {
+      $scope.regex = '[A-Za-z]{3}';
+    }]);
+</script>
 <!-- /.modal -->
